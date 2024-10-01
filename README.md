@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Environment Variables
+
+This project uses environment variables to securely store API keys. Before running the application, you need to set up your environment:
+
+1. Create a `.env` file in the root directory of the project.
+2. Add your OpenAI API key to the `.env` file:
+
+   REACT_APP_OPENAI_API_KEY=your_actual_api_key_here
+
+3. Replace `your_actual_api_key_here` with your actual OpenAI API key.
+
+Note: The `.env` file is included in `.gitignore` and should never be committed to the repository.
