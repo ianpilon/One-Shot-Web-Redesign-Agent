@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.visual-information-analyst {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #0033ad;
+}
+
+/* Input Container Styles */
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.url-input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.analyze-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.analyze-button:hover {
+  background-color: #45a049;
+}
+
+.analyze-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Analysis Visualization Styles */
+.analysis-visualization {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chart-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.bottom-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .bottom-charts {
+    flex-direction: row;
+  }
+
+  .bottom-charts .chart {
+    width: 48%;
+  }
+}
+
+.chart h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Chart Container Styles */
+.chart-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mock Dashboard Styles */
+.mock-dashboard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.mock-dashboard header {
+  background-color: #0033ad;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.mock-dashboard h1 {
+  margin: 0;
+  color: white;
+}
+
+.mock-dashboard-content {
+  padding: 20px;
+}
+
+.dashboard-section {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-section h3 {
+  margin-top: 0;
+  color: #0033ad;
+}
+
+.proposal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.proposal-item {
+  background-color: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.proposal-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .url-input, .analyze-button {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .analyze-button {
+    margin-top: 10px;
+  }
+
+  .chart-container {
+    padding: 10px;
+  }
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #ff0000;
+  background-color: #ffe6e6;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.bottom-charts .chart {
+  height: 400px; /* Increased height to accommodate legend at bottom */
+}
+
+.bottom-charts .recharts-responsive-container {
+  height: 100% !important; /* Ensure the chart takes full height of its container */
+}
+
+@media (max-width: 767px) {
+  .bottom-charts .chart {
+    height: 350px; /* Slightly reduced height for mobile */
+  }
+}
